@@ -52,7 +52,7 @@
 </body>
 </html> -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -74,6 +74,35 @@
             lname:'singh'
          }
          obj1.fullname.call(obj2,5)
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind Method</title>
+</head>
+<body>
+    <script>
+        let  obj1={
+               name:'vikas',
+               lname:'singh',
+               fullname:function(ratting ,subscribe){
+                console.log(`me firstName ${this.name} and last name ${this.lname} and ${ratting} and subscribe Chanel  ${subscribe}`);
+               }
+        } 
+        let obj2 ={
+            name:'mohan',
+            lname:'singh'
+        }
+        obj1.fullname.apply(obj2,[5,"subscribe"])
+        let max  = Math.max(1,2,3)
+        console.log(max);
+        let arrMax  = Math.max.apply(null,[1,2,3,4,5,6,7,8])
+        console.log(arrMax);
     </script>
 </body>
 </html>
