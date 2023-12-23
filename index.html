@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -48,6 +48,32 @@
 
          parent1.addEventListener('click',parent,false)
          child1.addEventListener('click',child,false)
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Call</title>
+</head>
+<body>
+    <script>
+        let obj1 ={
+            name:'vikas',
+            lname:'jadaun',
+            fullname:function(ratting){
+                console.log(`my first name ${this.name} And Last Name ${this.lname} and ratting ${ratting}`);
+            }
+        }
+
+         let obj2 ={
+            name:'viveek',
+            lname:'singh'
+         }
+         obj1.fullname.call(obj2,5)
     </script>
 </body>
 </html>
